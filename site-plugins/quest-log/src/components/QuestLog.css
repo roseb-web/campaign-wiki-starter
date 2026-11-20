@@ -1,0 +1,282 @@
+.mw-quest-log {
+  margin-top: 2rem;
+}
+
+/* Main quests: a featured card */
+.mw-quest-log a.mw-quest-main-card {
+  display: block;
+  padding: 1rem 1.2rem;
+  margin-bottom: 0.8rem;
+  border: 1px solid var(--lightgray);
+  border-left: 3px solid var(--secondary);
+  border-radius: 0 10px 10px 0;
+  background: none;
+  color: inherit;
+  text-decoration: none;
+  font-weight: normal;
+  transition: border-color 0.2s ease;
+}
+
+.mw-quest-log a.mw-quest-main-card:hover {
+  border-color: var(--secondary);
+}
+
+.mw-quest-main-title {
+  display: block;
+  margin: 0.4rem 0 0.2rem;
+  font-family: var(--headerFont);
+  font-size: 1.35rem;
+  font-weight: 600;
+  color: var(--dark);
+}
+
+.mw-quest-summary {
+  display: block;
+  font-size: 0.95rem;
+  color: var(--darkgray);
+}
+
+/* Other quests: compact rows */
+.mw-quest-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.mw-quest-list li {
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+  margin: 0;
+  padding: 0.45rem 0.2rem;
+}
+
+.mw-quest-list li + li {
+  border-top: 1px solid var(--lightgray);
+}
+
+.mw-quest-type {
+  flex-shrink: 0;
+  min-width: 4.2rem;
+  text-align: center;
+  font-size: 0.72rem;
+  font-weight: 500;
+  padding: 0.05rem 0.6rem;
+  border-radius: 6px;
+  background: var(--lightgray);
+  color: var(--darkgray);
+}
+
+.mw-quest-main-card .mw-quest-type {
+  min-width: 0;
+}
+
+.mw-quest-main { background: color-mix(in srgb, #a46b0a 22%, transparent); color: #6e4706; }
+.mw-quest-personal { background: color-mix(in srgb, #6b6a3a 22%, transparent); color: #4a4926; }
+.mw-quest-faction { background: color-mix(in srgb, #8a4a5a 20%, transparent); color: #6a3040; }
+
+:root[saved-theme="dark"] .mw-quest-main { color: #e5bb68; }
+:root[saved-theme="dark"] .mw-quest-personal { color: #b8b67e; }
+:root[saved-theme="dark"] .mw-quest-faction { color: #d99aaa; }
+
+.mw-quest-log a.mw-quest-title {
+  background: none;
+  padding: 0;
+  font-weight: 500;
+  color: var(--dark);
+  text-decoration: none;
+}
+
+.mw-quest-log a.mw-quest-title:hover {
+  color: var(--secondary);
+}
+
+/* Home page boxes: Previously on, New since, Coming up */
+.mw-home {
+  margin: 2rem 0 0.5rem;
+}
+
+a.mw-home-prev {
+  display: block;
+  padding: 4px;
+  border: 1.5px solid var(--secondary);
+  border-radius: 10px;
+  color: var(--darkgray);
+  font-weight: 400;
+  text-decoration: none;
+  background: none;
+}
+
+a.mw-home-prev:hover .mw-home-more {
+  text-decoration: underline;
+}
+
+.mw-home-prev-inner {
+  display: block;
+  padding: 0.9rem 1.2rem;
+  border: 1px solid color-mix(in srgb, var(--secondary) 35%, transparent);
+  border-radius: 6px;
+}
+
+.mw-home-kicker {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.2rem 1rem;
+  font-size: 0.75rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--secondary);
+}
+
+.mw-home-prev-date {
+  margin-left: auto;
+  letter-spacing: normal;
+  text-transform: none;
+  color: var(--gray);
+}
+
+.mw-home-prev-title {
+  display: block;
+  margin: 0.2rem 0 0.4rem;
+  font-family: var(--headerFont);
+  font-size: 1.5rem;
+  color: var(--dark);
+}
+
+.mw-home-prev-lead {
+  display: block;
+}
+
+.mw-home-prev ul {
+  margin: 0.4rem 0 0.5rem;
+}
+
+.mw-home-more,
+.mw-home-link {
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--secondary);
+}
+
+.mw-home-boxes {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 1.1rem;
+  margin-top: 1.2rem;
+}
+
+.mw-home-box {
+  padding: 0.8rem 1.1rem 0.9rem;
+  border: 1px solid var(--lightgray);
+  border-radius: 10px;
+}
+
+.mw-home-box h3 {
+  margin: 0 0 0.5rem;
+  font-size: 1.05rem;
+  color: var(--secondary);
+}
+
+ul.mw-home-list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.mw-home-list li {
+  display: flex;
+  align-items: baseline;
+  gap: 0.6rem;
+  margin: 0;
+  padding: 0.4rem 0;
+  border-top: 1px solid var(--lightgray);
+}
+
+.mw-home-list li:first-child {
+  border-top: none;
+}
+
+.mw-home-list small {
+  margin-left: auto;
+  font-size: 0.75rem;
+  color: var(--gray);
+  white-space: nowrap;
+}
+
+.mw-home-tag {
+  flex: none;
+  width: 4.4rem;
+  padding: 0.05rem 0;
+  border-radius: 999px;
+  font-size: 0.7rem;
+  text-align: center;
+}
+
+.mw-home-new {
+  background: color-mix(in srgb, #4e6b5a 18%, var(--light));
+  color: #3c5a3a;
+}
+
+.mw-home-updated {
+  background: color-mix(in srgb, var(--secondary) 18%, var(--light));
+  color: color-mix(in srgb, var(--secondary) 70%, var(--darkgray));
+}
+
+.mw-home-all summary {
+  margin-top: 0.3rem;
+  font-size: 0.8rem;
+  color: var(--gray);
+  cursor: pointer;
+}
+
+li.mw-home-soon {
+  align-items: center;
+}
+
+.mw-home-soon small {
+  display: block;
+  margin: 0;
+}
+
+.mw-home-days {
+  flex: none;
+  width: 3.2rem;
+  padding: 0.2rem 0;
+  border-radius: 8px;
+  background: color-mix(in srgb, var(--secondary) 12%, var(--light));
+  color: var(--dark);
+  font-size: 0.7rem;
+  line-height: 1.15;
+  text-align: center;
+}
+
+.mw-home-days b {
+  display: block;
+  font-size: 1.1rem;
+}
+
+.mw-home-link {
+  display: inline-block;
+  margin-top: 0.4rem;
+  background: none;
+  padding: 0;
+}
+
+.mw-home-list a.internal,
+a.internal.mw-home-link {
+  padding: 0;
+  background: none;
+  font-weight: 400;
+  color: var(--dark);
+  text-decoration: none;
+}
+
+.mw-home-list a.internal:hover {
+  color: var(--secondary);
+  text-decoration: underline;
+}
+
+a.internal.mw-home-link {
+  font-weight: 600;
+  color: var(--secondary);
+}

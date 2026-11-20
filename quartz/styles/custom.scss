@@ -1,0 +1,5 @@
+// The wiki's own styles, in two parts:
+// - _theme.scss: the look (fonts, colours, headings, links). Change this one to restyle.
+// - _layout.scss: layout the features need (menu, phones, full-width pages).
+@use "./theme";
+@use "./layout";
